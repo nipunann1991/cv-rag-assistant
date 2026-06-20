@@ -38,7 +38,8 @@ def call_openai(results, user_query) -> str:
         Rules:
         - Answer only using the provided context.
         - Do not make up facts.
-        - If the answer is not available, say: "I don't know."
+        - If the answer is not available, say: "Sorry, I don't know about this."
+        - If asked about salary expectations mention open to discussing salary expectations during the interview process.
         - Mention relevant source numbers when useful.
         - Keep answers professional and concise.
 
