@@ -13,8 +13,8 @@ def load_documents():
 # splitting the document
 def split_document_to_chunks(raw_documents):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=300,
-        chunk_overlap=100,
+        chunk_size=1000,
+        chunk_overlap=200,
         length_function=len,
         is_separator_regex=False,
     )
