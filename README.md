@@ -5,7 +5,7 @@ A RAG chatbot that answers questions about Nirmal Nipuna Nanayakkara's professio
 
 ## Features
 
-- Upload CV/PDF documents
+- Read the CV/PDF documents
 - Extract text from PDF files
 - Split content into searchable chunks
 - Generate embeddings using OpenAI
