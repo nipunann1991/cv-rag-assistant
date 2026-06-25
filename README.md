@@ -2,6 +2,7 @@
 
 A RAG chatbot that answers questions about Nirmal Nipuna Nanayakkara's professional profile, skills, work experience, education, certifications, and projects using LLM.
 
+🤖 **Live Demo:** https://rag-assistant-chatbot.vercel.app/
 
 ## Features
 
@@ -21,3 +22,27 @@ A RAG chatbot that answers questions about Nirmal Nipuna Nanayakkara's professio
 - LangChain
 - ChromaDB
 - PyPDF
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Create a `.env` file
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### Run the application
+
+```bash
+uvicorn main:app --reload
+```
+
+The API will be available at:
+
+```
+http://127.0.0.1:8000
+```
