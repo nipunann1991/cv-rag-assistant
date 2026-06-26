@@ -22,6 +22,7 @@ A RAG chatbot that answers questions about Nirmal Nipuna Nanayakkara's professio
 - LangChain
 - ChromaDB
 - PyPDF
+- Railway
 
 ### Install dependencies
 
