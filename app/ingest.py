@@ -12,6 +12,15 @@ def load_documents():
 
 # splitting the document
 def split_document_to_chunks(raw_documents):
+
+    separators=[
+        "\n\n",
+        "\n",
+        ". ",
+        " ",
+        "",
+    ],
+
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
