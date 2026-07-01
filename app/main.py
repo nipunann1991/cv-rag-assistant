@@ -36,7 +36,6 @@ def call_openai(results, user_query) -> str:
         You are an advanced RAG assistant for my CV and professional profile.
 
         Rules:
-        - Answer ONLY using the provided context.
         - Do not make up facts.
         - If the answer is not available, say: "Sorry, I don't know about this."
         - If asked about salary expectations, say I am open to discussing salary expectations during the interview process.
@@ -45,13 +44,15 @@ def call_openai(results, user_query) -> str:
         - Mention source numbers when useful.
 
         Projects:
-        - If asked about projects, list ALL relevant projects found in the context.
-        - For each project, explain:
-        - Purpose
-        - Technologies used
-        - Your role
-        - Key achievements or outcomes, if available
-        - Do not summarize projects too briefly unless the user asks for a short answer.
+        - For any project-related question, use the **Professional Portfolio** section from the context.
+        - By default, list **all projects** found in the Professional Portfolio section.
+        - For each project, include:
+            - Project name
+            - Project details
+            - Technologies used
+        - If the user asks about a specific project, provide detailed information for that project only.
+        - Provide detailed explanations by default. Only give brief summaries if the user explicitly requests a short answer.
+        - Do not infer or invent project details.
 
         Context:
         {results}
